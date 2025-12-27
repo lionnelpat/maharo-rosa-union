@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion';
 import { ChevronDown, Heart } from 'lucide-react';
 import coupleHero from '@/assets/couple-hero.jpg';
-
+import CountdownTimer from './CountdownTimer';
 const HeroSection = () => {
   const scrollToStory = () => {
     const element = document.querySelector('#histoire');
@@ -59,7 +59,7 @@ const HeroSection = () => {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.6 }}
-          className="mb-8"
+          className="mb-6"
         >
           <p className="font-heading text-xl md:text-2xl text-foreground/90 mb-2">
             3 Janvier 2026
@@ -68,6 +68,11 @@ const HeroSection = () => {
             Église Évangélique de Dakar
           </p>
         </motion.div>
+
+        {/* Countdown Timer */}
+        <div className="mb-8">
+          <CountdownTimer />
+        </div>
 
         {/* Ornament Divider */}
         <motion.div
