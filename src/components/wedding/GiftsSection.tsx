@@ -134,76 +134,76 @@ const GiftsSection = () => {
         </motion.div>
 
         {/* Gifts Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-6 max-w-6xl mx-auto mb-12">
-          {gifts.map((gift, index) => {
-            const Icon = gift.icon;
-            const isSelected = selectedGift === gift.id;
+        {/*<div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-6 max-w-6xl mx-auto mb-12">*/}
+        {/*  {gifts.map((gift, index) => {*/}
+        {/*    const Icon = gift.icon;*/}
+        {/*    const isSelected = selectedGift === gift.id;*/}
 
-            return (
-              <motion.div
-                key={gift.id}
-                initial={{ opacity: 0, scale: 0.9 }}
-                animate={isInView ? { opacity: 1, scale: 1 } : {}}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-                onClick={() => setSelectedGift(isSelected ? null : gift.id)}
-                className={`card-wedding cursor-pointer group ${
-                  isSelected ? 'ring-2 ring-gold shadow-lg' : ''
-                }`}
-              >
-                {/* Category Badge */}
-                <span className="inline-block px-2 py-0.5 rounded-full bg-gold/10 text-gold-bright text-xs mb-3">
-                  {gift.category}
-                </span>
+        {/*    return (*/}
+        {/*      <motion.div*/}
+        {/*        key={gift.id}*/}
+        {/*        initial={{ opacity: 0, scale: 0.9 }}*/}
+        {/*        animate={isInView ? { opacity: 1, scale: 1 } : {}}*/}
+        {/*        transition={{ duration: 0.5, delay: index * 0.1 }}*/}
+        {/*        onClick={() => setSelectedGift(isSelected ? null : gift.id)}*/}
+        {/*        className={`card-wedding cursor-pointer group ${*/}
+        {/*          isSelected ? 'ring-2 ring-gold shadow-lg' : ''*/}
+        {/*        }`}*/}
+        {/*      >*/}
+        {/*        /!* Category Badge *!/*/}
+        {/*        <span className="inline-block px-2 py-0.5 rounded-full bg-gold/10 text-gold-bright text-xs mb-3">*/}
+        {/*          {gift.category}*/}
+        {/*        </span>*/}
 
-                {/* Icon */}
-                <div className="w-12 h-12 rounded-xl bg-gold/10 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
-                  <Icon className="w-6 h-6 text-gold-bright" />
-                </div>
+        {/*        /!* Icon *!/*/}
+        {/*        <div className="w-12 h-12 rounded-xl bg-gold/10 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">*/}
+        {/*          <Icon className="w-6 h-6 text-gold-bright" />*/}
+        {/*        </div>*/}
 
-                {/* Name */}
-                <h3 className="font-heading text-lg text-foreground mb-2">
-                  {gift.name}
-                </h3>
+        {/*        /!* Name *!/*/}
+        {/*        <h3 className="font-heading text-lg text-foreground mb-2">*/}
+        {/*          {gift.name}*/}
+        {/*        </h3>*/}
 
-                {/* Description */}
-                <p className="text-sm text-muted-foreground mb-4">
-                  {gift.description}
-                </p>
+        {/*        /!* Description *!/*/}
+        {/*        <p className="text-sm text-muted-foreground mb-4">*/}
+        {/*          {gift.description}*/}
+        {/*        </p>*/}
 
-                {/* Interested Counter */}
-                {gift.interested > 0 && (
-                  <div className="flex items-center gap-2 text-sm text-bordeaux">
-                    <Users className="w-4 h-4" />
-                    <span>
-                      {gift.interested} personne{gift.interested > 1 ? 's' : ''}{' '}
-                      intéressée{gift.interested > 1 ? 's' : ''}
-                    </span>
-                  </div>
-                )}
+        {/*        /!* Interested Counter *!/*/}
+        {/*        {gift.interested > 0 && (*/}
+        {/*          <div className="flex items-center gap-2 text-sm text-bordeaux">*/}
+        {/*            <Users className="w-4 h-4" />*/}
+        {/*            <span>*/}
+        {/*              {gift.interested} personne{gift.interested > 1 ? 's' : ''}{' '}*/}
+        {/*              intéressée{gift.interested > 1 ? 's' : ''}*/}
+        {/*            </span>*/}
+        {/*          </div>*/}
+        {/*        )}*/}
 
-                {/* Expanded Content */}
-                {isSelected && (
-                  <motion.div
-                    initial={{ opacity: 0, height: 0 }}
-                    animate={{ opacity: 1, height: 'auto' }}
-                    exit={{ opacity: 0, height: 0 }}
-                    className="mt-4 pt-4 border-t border-border"
-                  >
-                    <a
-                      href="https://wa.me/221XXXXXXXXX"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="flex items-center justify-center gap-2 btn-gold w-full text-sm"
-                    >
-                      <MessageCircle className="w-4 h-4" />
-                      Contactez-nous
-                    </a>
-                  </motion.div>
-                )}
-              </motion.div>
-            );
-          })}
-        </div>
+        {/*        /!* Expanded Content *!/*/}
+        {/*        {isSelected && (*/}
+        {/*          <motion.div*/}
+        {/*            initial={{ opacity: 0, height: 0 }}*/}
+        {/*            animate={{ opacity: 1, height: 'auto' }}*/}
+        {/*            exit={{ opacity: 0, height: 0 }}*/}
+        {/*            className="mt-4 pt-4 border-t border-border"*/}
+        {/*          >*/}
+        {/*            <a*/}
+        {/*              href="https://wa.me/221XXXXXXXXX"*/}
+        {/*              target="_blank"*/}
+        {/*              rel="noopener noreferrer"*/}
+        {/*              className="flex items-center justify-center gap-2 btn-gold w-full text-sm"*/}
+        {/*            >*/}
+        {/*              <MessageCircle className="w-4 h-4" />*/}
+        {/*              Contactez-nous*/}
+        {/*            </a>*/}
+        {/*          </motion.div>*/}
+        {/*        )}*/}
+        {/*      </motion.div>*/}
+        {/*    );*/}
+        {/*  })}*/}
+        {/*</div>*/}
 
         {/* How to Contribute */}
         <motion.div
