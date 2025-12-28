@@ -12,97 +12,110 @@
 
 @layer base {
   :root {
-    /* Wedding Color Palette - Marron, Beige crème, Or rosé & Terracotta */
-    --background: 30 35% 93%; /* Beige crème #F2E6D8 */
-    --foreground: 0 0% 12%; /* Text dark #1F1F1F */
+    /* Wedding Color Palette - Terracotta, Beige, Blanc Crème & Vert Sauge */
 
-    --card: 30 30% 88%; /* Beige plus foncé */
-    --card-foreground: 0 0% 12%;
+    /* Couleurs Principales */
+    --terracotta: #B65A38; /* Marron chaud/Terracotta principal */
+    --beige: #E3C9B3; /* Beige crème moyen */
+    --cream: #FFF8F1; /* Blanc crème très léger */
+    --sage: #7A9B85; /* Vert sauge */
 
-    --popover: 30 35% 93%;
-    --popover-foreground: 0 0% 12%;
+    /* Variables de Base */
+    --background: 28 100% 97%; /* Blanc crème #FFF8F1 */
+    --foreground: 18 25% 20%; /* Texte très foncé #3D2F28 */
 
-    --primary: 35 38% 60%; /* Or rosé #C9A26A */
-    --primary-foreground: 0 0% 12%;
+    --card: 24 49% 80%; /* Beige crème #E3C9B3 */
+    --card-foreground: 18 25% 20%;
 
-    --secondary: 18 23% 19%; /* Marron foncé #3A2B26 */
-    --secondary-foreground: 30 35% 93%;
+    --popover: 28 100% 97%; /* Blanc crème */
+    --popover-foreground: 18 25% 20%;
 
-    --muted: 30 25% 85%;
-    --muted-foreground: 18 20% 35%;
+    --primary: 18 53% 47%; /* Terracotta #B65A38 */
+    --primary-foreground: 28 100% 97%; /* Blanc crème */
 
-    --accent: 15 56% 50%; /* Terracotta #C45A3A */
-    --accent-foreground: 0 0% 100%;
+    --secondary: 138 15% 54%; /* Vert sauge #7A9B85 */
+    --secondary-foreground: 28 100% 97%;
+
+    --muted: 24 40% 85%; /* Beige plus clair */
+    --muted-foreground: 18 20% 40%;
+
+    --accent: 18 53% 47%; /* Terracotta (même que primary) */
+    --accent-foreground: 28 100% 97%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 30 25% 80%;
-    --input: 30 25% 85%;
-    --ring: 35 38% 60%;
+    --border: 24 40% 85%; /* Beige léger pour les bordures */
+    --input: 24 40% 88%; /* Beige très léger pour inputs */
+    --ring: 18 53% 47%; /* Terracotta pour focus ring */
 
     --radius: 0.5rem;
 
     /* Custom Wedding Variables */
-    --gold: 35 38% 60%; /* Or rosé #C9A26A */
-    --gold-bright: 35 45% 55%;
-    --gold-light: 35 40% 75%;
-    --beige: 30 35% 93%; /* Beige crème #F2E6D8 */
-    --beige-dark: 30 30% 88%;
-    --bordeaux: 18 23% 19%; /* Marron foncé #3A2B26 */
-    --bordeaux-light: 18 30% 30%;
-    --cream: 30 35% 96%;
-    --terracotta: 15 56% 50%; /* #C45A3A */
+    --gold: 18 53% 47%; /* Terracotta primaire #B65A38 */
+    --gold-bright: 18 60% 50%; /* Terracotta plus vibrant */
+    --gold-light: 24 49% 80%; /* Beige crème #E3C9B3 */
+    --beige-dark: 24 45% 75%; /* Beige plus profond */
+    --bordeaux: 138 15% 54%; /* Vert sauge #7A9B85 */
+    --bordeaux-light: 138 20% 65%; /* Vert sauge plus clair */
+    --cream-white: 28 100% 97%; /* Blanc crème #FFF8F1 */
+    --terracotta: 18 53% 47%; /* #B65A38 */
+    --terracotta-light: 18 55% 58%; /* Terracotta plus clair */
+    --sage-green: 138 15% 54%; /* #7A9B85 */
 
     /* Gradients */
-    --gradient-gold: linear-gradient(135deg, hsl(35, 38%, 60%) 0%, hsl(35, 45%, 55%) 100%);
-    --gradient-hero: linear-gradient(180deg, hsla(30, 35%, 93%, 0) 0%, hsla(30, 35%, 93%, 0.9) 80%);
-    --gradient-card: linear-gradient(180deg, hsla(30, 30%, 88%, 0.8) 0%, hsla(30, 35%, 93%, 1) 100%);
+    --gradient-gold: linear-gradient(135deg, hsl(18, 53%, 47%) 0%, hsl(18, 60%, 50%) 100%);
+    --gradient-hero: linear-gradient(180deg, hsla(28, 100%, 97%, 0) 0%, hsla(28, 100%, 97%, 0.95) 80%);
+    --gradient-card: linear-gradient(180deg, hsla(24, 49%, 80%, 0.7) 0%, hsla(28, 100%, 97%, 1) 100%);
+    --gradient-warm: linear-gradient(135deg, hsl(18, 53%, 47%) 0%, hsl(24, 49%, 80%) 100%);
+    --gradient-sage: linear-gradient(135deg, hsl(138, 15%, 54%) 0%, hsl(138, 20%, 65%) 100%);
 
     /* Shadows */
-    --shadow-soft: 0 4px 20px -4px hsla(18, 23%, 19%, 0.15);
-    --shadow-gold: 0 4px 30px -8px hsla(35, 38%, 60%, 0.4);
-    --shadow-card: 0 8px 32px -8px hsla(18, 23%, 19%, 0.1);
+    --shadow-soft: 0 4px 20px -4px hsla(18, 53%, 47%, 0.15);
+    --shadow-gold: 0 4px 30px -8px hsla(18, 53%, 47%, 0.35);
+    --shadow-card: 0 8px 32px -8px hsla(18, 53%, 47%, 0.12);
+    --shadow-sage: 0 4px 20px -4px hsla(138, 15%, 54%, 0.1);
 
     /* Typography */
     --font-heading: 'Playfair Display', Georgia, serif;
     --font-body: 'Lato', 'Helvetica Neue', sans-serif;
 
-    --sidebar-background: 30 35% 93%;
-    --sidebar-foreground: 0 0% 12%;
-    --sidebar-primary: 35 38% 60%;
-    --sidebar-primary-foreground: 0 0% 12%;
-    --sidebar-accent: 30 30% 88%;
-    --sidebar-accent-foreground: 0 0% 12%;
-    --sidebar-border: 30 25% 80%;
-    --sidebar-ring: 35 38% 60%;
+    /* Sidebar Variables */
+    --sidebar-background: 28 100% 97%; /* Blanc crème */
+    --sidebar-foreground: 18 25% 20%; /* Texte foncé */
+    --sidebar-primary: 18 53% 47%; /* Terracotta */
+    --sidebar-primary-foreground: 28 100% 97%; /* Blanc crème */
+    --sidebar-accent: 24 49% 80%; /* Beige crème */
+    --sidebar-accent-foreground: 18 25% 20%; /* Texte foncé */
+    --sidebar-border: 24 40% 85%; /* Beige léger */
+    --sidebar-ring: 18 53% 47%; /* Terracotta */
   }
 
   .dark {
-    --background: 18 23% 12%;
-    --foreground: 30 35% 96%;
+    --background: 18 20% 15%; /* Fond très foncé */
+    --foreground: 28 100% 97%; /* Blanc crème pour texte */
 
-    --card: 18 20% 16%;
-    --card-foreground: 30 35% 96%;
+    --card: 18 20% 20%; /* Fond carte foncée */
+    --card-foreground: 28 100% 97%; /* Blanc crème */
 
-    --popover: 18 23% 12%;
-    --popover-foreground: 30 35% 96%;
+    --popover: 18 20% 15%;
+    --popover-foreground: 28 100% 97%;
 
-    --primary: 35 38% 60%;
-    --primary-foreground: 18 23% 12%;
+    --primary: 18 60% 55%; /* Terracotta plus vibrant en dark mode */
+    --primary-foreground: 18 20% 15%;
 
-    --secondary: 30 25% 25%;
-    --secondary-foreground: 30 35% 96%;
+    --secondary: 138 20% 65%; /* Vert sauge plus clair en dark */
+    --secondary-foreground: 28 100% 97%;
 
-    --muted: 18 20% 20%;
-    --muted-foreground: 30 15% 60%;
+    --muted: 18 20% 25%;
+    --muted-foreground: 28 70% 70%;
 
-    --accent: 15 56% 50%;
-    --accent-foreground: 30 35% 96%;
+    --accent: 18 60% 55%; /* Terracotta vibrant */
+    --accent-foreground: 28 100% 97%;
 
-    --border: 18 20% 22%;
-    --input: 18 20% 22%;
-    --ring: 35 38% 60%;
+    --border: 18 20% 25%;
+    --input: 18 20% 25%;
+    --ring: 18 60% 55%;
   }
 }
 

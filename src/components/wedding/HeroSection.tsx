@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
 import { ChevronDown, Heart } from 'lucide-react';
-import coupleHero from '@/assets/couple-hero.jpg';
+import coupleHero from '@/assets/hero.png';
 import CountdownTimer from './CountdownTimer';
 const HeroSection = () => {
   const scrollToStory = () => {
@@ -110,7 +110,7 @@ const HeroSection = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 1.2 }}
           onClick={scrollToStory}
-          className="btn-gold group"
+          className="btn-gold group text-white"
         >
           Découvrir notre histoire
           <ChevronDown className="inline ml-2 w-4 h-4 group-hover:translate-y-1 transition-transform" />

@@ -111,7 +111,7 @@ const ContactSection = () => {
             {/* Contact Cards */}
             <div className="space-y-4">
               <a
-                href="https://wa.me/221XXXXXXXXX"
+                href="https://wa.me/00221776581563"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="card-wedding flex items-center gap-4 group hover:shadow-lg"
@@ -122,13 +122,13 @@ const ContactSection = () => {
                 <div>
                   <h3 className="font-heading text-foreground">WhatsApp</h3>
                   <p className="text-sm text-muted-foreground">
-                    +221 XX XXX XX XX
+                    +221 77 658 15 63
                   </p>
                 </div>
               </a>
 
               <a
-                href="mailto:maharo.rosa@email.com"
+                href="mailto:business.modeltech@gmail.com"
                 className="card-wedding flex items-center gap-4 group hover:shadow-lg"
               >
                 <div className="w-12 h-12 rounded-xl bg-gold/10 flex items-center justify-center group-hover:scale-110 transition-transform">
@@ -137,7 +137,7 @@ const ContactSection = () => {
                 <div>
                   <h3 className="font-heading text-foreground">Email</h3>
                   <p className="text-sm text-muted-foreground">
-                    maharo.rosa@email.com
+                    business.modeltech@gmail.com
                   </p>
                 </div>
               </a>
@@ -149,7 +149,7 @@ const ContactSection = () => {
                 <div>
                   <h3 className="font-heading text-foreground">Téléphone</h3>
                   <p className="text-sm text-muted-foreground">
-                    +221 XX XXX XX XX
+                    +221 77 658 15 63
                   </p>
                 </div>
               </div>
@@ -168,7 +168,7 @@ const ContactSection = () => {
                 href="https://forms.google.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="btn-gold inline-flex items-center gap-2"
+                className="btn-gold inline-flex text-white items-center gap-2"
               >
                 Remplir le formulaire
                 <ExternalLink className="w-4 h-4" />
@@ -281,7 +281,7 @@ const ContactSection = () => {
                   <button
                     type="submit"
                     disabled={isSubmitting}
-                    className="btn-gold w-full flex items-center justify-center gap-2 disabled:opacity-70"
+                    className="btn-gold w-full flex items-center text-white justify-center gap-2 disabled:opacity-70"
                   >
                     {isSubmitting ? (
                       <>

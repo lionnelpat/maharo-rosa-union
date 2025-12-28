@@ -104,7 +104,7 @@ const GiftsSection = () => {
             Liste de mariage
           </span>
           <h2 className="heading-section text-foreground mb-4">
-            Soutenir Notre <span className="text-gold-gradient">Union</span>
+            Vous souhaitez nous faire des <span className="text-gold-gradient">Cadeaux</span>
           </h2>
           <div className="divider-ornament max-w-xs mx-auto mb-6">
             <Gift className="w-5 h-5 text-gold" />
@@ -224,17 +224,17 @@ const GiftsSection = () => {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
-                href="https://wa.me/221XXXXXXXXX"
+                href="https://wa.me/00221776581563"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="btn-gold"
+                className="btn-gold text-white"
               >
                 <MessageCircle className="inline w-4 h-4 mr-2" />
                 WhatsApp
               </a>
               <a
-                href="mailto:maharo.rosa@email.com"
-                className="btn-outline-gold"
+                href="mailto:business.modeltech@gmail.com"
+                className="btn-outline-gold "
               >
                 Envoyer un email
               </a>

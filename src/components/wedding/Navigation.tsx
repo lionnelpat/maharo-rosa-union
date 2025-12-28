@@ -103,7 +103,7 @@ const Navigation = () => {
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ delay: index * 0.1 }}
                   onClick={() => scrollToSection(item.href)}
-                  className="text-left font-body text-lg text-foreground/80 hover:text-gold-bright transition-colors py-2"
+                  className="text-left font-body text-lg text-white text-foreground/80 hover:text-gold-bright transition-colors py-2"
                 >
                   {item.name}
                 </motion.button>
@@ -113,7 +113,7 @@ const Navigation = () => {
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ delay: 0.5 }}
                 onClick={() => scrollToSection('#contact')}
-                className="btn-gold text-center mt-2"
+                className="btn-gold text-center text-white mt-2"
               >
                 Laisser une bénédiction
               </motion.button>

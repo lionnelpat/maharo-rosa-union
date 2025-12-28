@@ -2,8 +2,8 @@ import { motion } from 'framer-motion';
 import { useInView } from 'framer-motion';
 import { useRef } from 'react';
 import { Heart, Sparkles } from 'lucide-react';
-import coupleStory from '@/assets/couple-story.jpg';
-import coupleStory2 from '@/assets/couple-story-2.jpg';
+import coupleStory from '@/assets/hero.png';
+import coupleStory2 from '@/assets/hero.png';
 
 const StorySection = () => {
   const ref = useRef(null);
