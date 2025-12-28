@@ -61,6 +61,7 @@ export default {
           light: "hsl(var(--bordeaux-light))",
         },
         cream: "hsl(var(--cream))",
+        terracotta: "hsl(var(--terracotta))",
         sidebar: {
           DEFAULT: "hsl(var(--sidebar-background))",
           foreground: "hsl(var(--sidebar-foreground))",
