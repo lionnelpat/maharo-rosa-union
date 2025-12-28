@@ -52,20 +52,20 @@ const CountdownTimer = () => {
           className="flex flex-col items-center"
         >
           <div className="relative">
-            <div className="w-16 h-16 md:w-20 md:h-20 rounded-lg bg-background/30 backdrop-blur-md border border-gold/30 flex items-center justify-center shadow-lg">
+            <div className="w-16 h-16 md:w-20 md:h-20 rounded-lg bg-white/20 backdrop-blur-md border border-white/30 flex items-center justify-center shadow-lg">
               <motion.span
                 key={unit.value}
                 initial={{ scale: 1.2, opacity: 0 }}
                 animate={{ scale: 1, opacity: 1 }}
                 transition={{ duration: 0.3 }}
-                className="font-heading text-2xl md:text-3xl font-bold text-gold-gradient"
+                className="font-heading text-2xl md:text-3xl font-bold text-white drop-shadow-md"
               >
                 {String(unit.value).padStart(2, '0')}
               </motion.span>
             </div>
-            <div className="absolute -inset-1 bg-gold/10 rounded-lg blur-md -z-10" />
+            <div className="absolute -inset-1 bg-white/10 rounded-lg blur-md -z-10" />
           </div>
-          <span className="mt-2 text-xs md:text-sm font-body text-foreground/70 uppercase tracking-wider">
+          <span className="mt-2 text-xs md:text-sm font-body text-white/80 uppercase tracking-wider drop-shadow-sm">
             {unit.label}
           </span>
         </motion.div>

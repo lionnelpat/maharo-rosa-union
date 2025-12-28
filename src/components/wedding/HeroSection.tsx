@@ -35,7 +35,7 @@ const HeroSection = () => {
           transition={{ duration: 0.8, delay: 0.2 }}
           className="mb-6"
         >
-          <span className="inline-block px-6 py-2 rounded-full bg-gold/20 backdrop-blur-sm border border-gold/40 font-body text-sm tracking-[0.2em] uppercase text-gold-bright">
+          <span className="inline-block px-6 py-2 rounded-full bg-white/20 backdrop-blur-sm border border-white/40 font-body text-sm tracking-[0.2em] uppercase text-white">
             Save the Date
           </span>
         </motion.div>
@@ -45,13 +45,13 @@ const HeroSection = () => {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.4 }}
-          className="heading-display mb-4 text-foreground"
+          className="heading-display mb-4 text-white drop-shadow-lg"
         >
-          <span className="text-gold-gradient">Maharo</span>
-          <span className="mx-4 text-gold">
-            <Heart className="inline w-8 h-8 md:w-12 md:h-12 fill-gold/50" />
+          <span>Maharo</span>
+          <span className="mx-4 text-white">
+            <Heart className="inline w-8 h-8 md:w-12 md:h-12 fill-white/50" />
           </span>
-          <span className="text-gold-gradient">Rosa</span>
+          <span>Rosa</span>
         </motion.h1>
 
         {/* Date & Venue */}
@@ -61,10 +61,10 @@ const HeroSection = () => {
           transition={{ duration: 0.8, delay: 0.6 }}
           className="mb-6"
         >
-          <p className="font-heading text-xl md:text-2xl text-foreground/90 mb-2">
+          <p className="font-heading text-xl md:text-2xl text-white drop-shadow-md mb-2">
             3 Janvier 2026
           </p>
-          <p className="font-body text-muted-foreground">
+          <p className="font-body text-white/90 drop-shadow-md">
             Église Évangélique de Dakar
           </p>
         </motion.div>
@@ -79,9 +79,11 @@ const HeroSection = () => {
           initial={{ opacity: 0, scale: 0.8 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.8, delay: 0.8 }}
-          className="divider-ornament max-w-md mx-auto mb-8"
+          className="flex items-center justify-center gap-4 my-8 max-w-md mx-auto"
         >
-          <Heart className="w-5 h-5 text-gold fill-gold/30" />
+          <div className="h-px flex-1 max-w-24 bg-gradient-to-r from-transparent via-white/60 to-transparent" />
+          <Heart className="w-5 h-5 text-white fill-white/30" />
+          <div className="h-px flex-1 max-w-24 bg-gradient-to-r from-transparent via-white/60 to-transparent" />
         </motion.div>
 
         {/* Bible Verse */}
@@ -91,11 +93,13 @@ const HeroSection = () => {
           transition={{ duration: 0.8, delay: 1 }}
           className="max-w-2xl mx-auto mb-10"
         >
-          <blockquote className="verse-block text-foreground/80 text-lg md:text-xl">
+          <blockquote className="relative py-8 px-6 italic text-center font-heading text-white/90 text-lg md:text-xl drop-shadow-md">
+            <span className="absolute top-0 left-4 text-6xl opacity-30 text-white">"</span>
             En toute humilité et douceur, avec patience, supportez-vous les uns
             les autres dans l'amour.
+            <span className="absolute bottom-0 right-4 text-6xl opacity-30 text-white">"</span>
           </blockquote>
-          <cite className="block mt-4 font-body text-sm text-gold-bright tracking-wide">
+          <cite className="block mt-4 font-body text-sm text-white/80 tracking-wide drop-shadow-md">
             — Éphésiens 4:2
           </cite>
         </motion.div>
