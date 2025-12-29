@@ -110,10 +110,9 @@ const GiftsSection = () => {
             <Gift className="w-5 h-5 text-gold" />
           </div>
           <p className="font-body text-muted-foreground max-w-2xl mx-auto">
-            Maharo et Rosa remercient chaleureusement tous ceux qui souhaitent
-            les soutenir en cette occasion. Les dons seront utilisés comme
-            contribution à une œuvre de bienfaisance, prolongeant ainsi la
-            bénédiction reçue au sein de notre communauté chrétienne.
+            Maharo et Rosa remercient chaleureusement tous ceux qui souhaitent les soutenir en cette occasion.
+            Une partie des dons seront utilisés comme contribution à une œuvre de bienfaisance,
+            prolongeant ainsi la bénédiction reçue au sein de notre communauté chrétienne.
           </p>
         </motion.div>
 

@@ -67,17 +67,18 @@ const StorySection = () => {
               transition={{ duration: 0.8, delay: 0.4 }}
               className="space-y-6"
             >
-              <p className="font-body text-foreground/80 leading-relaxed">
+              <p className="font-body text-foreground/80 leading-relaxed text-justify">
                 C'est dans le cadre bienveillant des formations décentralisées de l'Institut Biblique de Genève que Maharo et Rosa se sont rencontrés en août 2023.
                 Lorsque Rosa a rejoint plus tard l'Eglise Evangélique de Dakar, cela a accéléré leur rapprochement.
-                Unis par leur foi commune et leur engagement au sein de la communauté chrétienne, ils ont appris à se connaître à travers les activités de l'église,
-                les moments d'étude biblique, de prière et de partage.
+                Unis par leur foi commune et leur engagement au sein de la communauté chrétienne,
+                ils ont appris à se connaître à travers les activités de l'église, les moments d'étude biblique, de prière et de partage.
 
               </p>
-              <p className="font-body text-foreground/80 leading-relaxed">
-                Au fil de leur cheminement, leur complicité s'est développée, fondée sur des valeurs partagées :
-                le désir de servir Dieu ensemble, le choix de centrer leur couple sur Christ,  l'autorité de la Bible sur tous les domaines de leur vie.
-
+              <p className="font-body text-foreground/80 leading-relaxed text-justify">
+                Maharo a beaucoup lu des livres sur la théologie systématique,  l'hermeneutique et les commentaires biblique.
+                Il aime les enseignements de John MacArthur, Florent Varak, Dominique Angers. <br/>
+                Rosa est très intéressée par l'apologétique, l'histoire de l'église et la culture.
+                Ses auteurs et enseignants préférés sont Jean Calvin, Spurgeon, Vauddie Boccham, Raphaël Charrier, Douglas Wilson.
 
               </p>
               <blockquote className="pl-4 border-l-4 border-gold italic text-muted-foreground font-heading">
@@ -98,14 +99,20 @@ const StorySection = () => {
               transition={{ duration: 0.8, delay: 0.6 }}
               className="space-y-6 order-2 md:order-1"
             >
-              <p className="font-body text-foreground/80 leading-relaxed">
-                Aujourd'hui, Maharo et Rosa sont heureux de vous inviter à célébrer leur union devant Dieu et devant les hommes.
-                Ce mariage est l'aboutissement d'un chemin de foi, d'amour et d'apprentissage mutuel.
+              <p className="font-body text-foreground/80 leading-relaxed text-justify">
+                En plus de leur foi, Maharo et Rosa se sont trouvés aussi plusieurs autres points communs :
+                la natation, les parents qui ont étudié en ex-URSS, leur domicile situé dans le centre ville de Dakar. <br/>
+                Au fil de leur cheminement, leur complicité s'est développée, fondée sur des valeurs partagées :
+                le désir de servir Dieu ensemble, le choix de centrer leur couple sur Christ,
+                l'autorité de la Bible sur tous les domaines de leur vie
               </p>
-              <p className="font-body text-foreground/80 leading-relaxed">
+              <p className="font-body text-foreground/80 leading-relaxed text-justify">
+                Aujourd'hui, Maharo et Rosa sont heureux de vous inviter à
+                célébrer leur union devant Dieu et devant les hommes.
+                Ce mariage est l'aboutissement d'un chemin de foi, d'amour et d'apprentissage mutuel. <br/>
                 Entourés de leurs familles et de leur communauté chrétienne,
                 ils s'engagent à bâtir un foyer ancré dans les valeurs de l'Évangile :
-                l'humilité, la douceur, la patience et l'amour inconditionnel.
+                l'humilité, la douceur, la patience et l'amour inconditionnel
               </p>
               <div className="flex items-center gap-3 text-gold-bright">
                 <Heart className="w-5 h-5 fill-gold" />
