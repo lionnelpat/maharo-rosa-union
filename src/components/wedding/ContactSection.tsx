@@ -162,7 +162,7 @@ const ContactSection = () => {
                 Confirmez votre présence
               </h3>
               <p className="text-muted-foreground text-sm mb-4">
-                Merci de nous confirmer votre présence avant le 15 décembre 2025
+                Merci de nous confirmer votre présence avant le 01 janvier 2026
               </p>
               <a
                 href="https://forms.google.com"

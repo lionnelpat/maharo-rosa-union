@@ -3,7 +3,7 @@ import { useInView } from 'framer-motion';
 import { useRef } from 'react';
 import { Heart, Sparkles } from 'lucide-react';
 import coupleStory from '@/assets/hero.png';
-import coupleStory2 from '@/assets/hero.png';
+import coupleStory2 from '@/assets/goree.jpeg';
 
 const StorySection = () => {
   const ref = useRef(null);
@@ -68,17 +68,17 @@ const StorySection = () => {
               className="space-y-6"
             >
               <p className="font-body text-foreground/80 leading-relaxed">
-                C'est dans le cadre bienveillant de l'Église Évangélique de
-                Dakar que Maharo et Rosa se sont rencontrés, il y a plusieurs
-                années. Unis par leur foi commune et leur engagement au sein de
-                la communauté chrétienne, ils ont appris à se connaître à
-                travers les activités de l'église, les moments de prière et de
-                partage.
+                C'est dans le cadre bienveillant des formations décentralisées de l'Institut Biblique de Genève que Maharo et Rosa se sont rencontrés en août 2023.
+                Lorsque Rosa a rejoint plus tard l'Eglise Evangélique de Dakar, cela a accéléré leur rapprochement.
+                Unis par leur foi commune et leur engagement au sein de la communauté chrétienne, ils ont appris à se connaître à travers les activités de l'église,
+                les moments d'étude biblique, de prière et de partage.
+
               </p>
               <p className="font-body text-foreground/80 leading-relaxed">
-                Au fil du temps, une complicité profonde s'est tissée entre eux,
-                fondée sur des valeurs partagées : l'amour du prochain, la
-                compassion, et le désir de servir Dieu ensemble.
+                Au fil de leur cheminement, leur complicité s'est développée, fondée sur des valeurs partagées :
+                le désir de servir Dieu ensemble, le choix de centrer leur couple sur Christ,  l'autorité de la Bible sur tous les domaines de leur vie.
+
+
               </p>
               <blockquote className="pl-4 border-l-4 border-gold italic text-muted-foreground font-heading">
                 "Car Dieu a dit : Il n'est pas bon que l'homme soit seul"
@@ -99,15 +99,13 @@ const StorySection = () => {
               className="space-y-6 order-2 md:order-1"
             >
               <p className="font-body text-foreground/80 leading-relaxed">
-                Aujourd'hui, Maharo et Rosa sont heureux de vous inviter à
-                célébrer leur union devant Dieu et devant les hommes. Ce mariage
-                est l'aboutissement d'un chemin de foi, d'amour et
-                d'apprentissage mutuel.
+                Aujourd'hui, Maharo et Rosa sont heureux de vous inviter à célébrer leur union devant Dieu et devant les hommes.
+                Ce mariage est l'aboutissement d'un chemin de foi, d'amour et d'apprentissage mutuel.
               </p>
               <p className="font-body text-foreground/80 leading-relaxed">
-                Entourés de leurs familles et de leur communauté chrétienne, ils
-                s'engagent à bâtir un foyer ancré dans les valeurs de l'Évangile
-                : la patience, la bonté, la fidélité et l'amour inconditionnel.
+                Entourés de leurs familles et de leur communauté chrétienne,
+                ils s'engagent à bâtir un foyer ancré dans les valeurs de l'Évangile :
+                l'humilité, la douceur, la patience et l'amour inconditionnel.
               </p>
               <div className="flex items-center gap-3 text-gold-bright">
                 <Heart className="w-5 h-5 fill-gold" />

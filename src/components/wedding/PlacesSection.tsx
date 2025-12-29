@@ -38,7 +38,7 @@ const places = [
     id: 'reception',
     icon: Wine,
     title: 'Cocktail & Réception',
-    time: '17h30',
+    time: '',
     venue: 'Centre Socio-Culturel Point E',
     address: 'Point E, Dakar, Sénégal',
     mapUrl: 'https://maps.app.goo.gl/19Z9ixxNhxEo5LVm8',
