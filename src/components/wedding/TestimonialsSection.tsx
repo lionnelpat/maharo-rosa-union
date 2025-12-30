@@ -1,8 +1,14 @@
 import { motion } from 'framer-motion';
-import { useInView } from 'framer-motion';
-import { useRef, useEffect, useState } from 'react';
-import { Heart, Quote, Users, Sparkles } from 'lucide-react';
+import { useEffect, useState } from 'react';
+import { Heart, Quote, Users, Sparkles, ChevronLeft, ChevronRight } from 'lucide-react';
 import { supabase } from '@/integrations/supabase/client';
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from '@/components/ui/carousel';
 
 interface Blessing {
   id: string;
@@ -13,13 +19,10 @@ interface Blessing {
 }
 
 const TestimonialsSection = () => {
-  const ref = useRef(null);
-  const isInView = useInView(ref, { once: true, margin: '-100px' });
   const [blessings, setBlessings] = useState<Blessing[]>([]);
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
-    // Fetch initial blessings
     const fetchBlessings = async () => {
       const { data, error } = await supabase
         .from('blessings')
@@ -34,7 +37,6 @@ const TestimonialsSection = () => {
 
     fetchBlessings();
 
-    // Subscribe to realtime updates
     const channel = supabase
       .channel('blessings-changes')
       .on(
@@ -79,13 +81,12 @@ const TestimonialsSection = () => {
   }
 
   if (blessings.length === 0) {
-    return null; // Don't show section if no blessings
+    return null;
   }
 
   return (
     <section
       id="temoignages"
-      ref={ref}
       className="relative py-20 md:py-32 bg-background overflow-hidden"
     >
       {/* Decorative Background */}
@@ -126,48 +127,69 @@ const TestimonialsSection = () => {
           </div>
         </motion.div>
 
-        {/* Testimonials Grid */}
-        <div className="max-w-6xl mx-auto grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {blessings.map((blessing, index) => (
-            <motion.div
-              key={blessing.id}
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: index * 0.1 }}
-              className="group"
-            >
-              <div className="card-wedding h-full flex flex-col p-6 hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
-                {/* Quote Icon */}
-                <div className="mb-4">
-                  <Quote className="w-8 h-8 text-gold/40" />
-                </div>
+        {/* Testimonials Carousel */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.2 }}
+          className="max-w-5xl mx-auto"
+        >
+          <Carousel
+            opts={{
+              align: 'start',
+              loop: true,
+            }}
+            className="w-full"
+          >
+            <CarouselContent className="-ml-4">
+              {blessings.map((blessing) => (
+                <CarouselItem
+                  key={blessing.id}
+                  className="pl-4 md:basis-1/2 lg:basis-1/3"
+                >
+                  <div className="card-wedding h-full flex flex-col p-6 hover:shadow-lg transition-all duration-300">
+                    {/* Quote Icon */}
+                    <div className="mb-4">
+                      <Quote className="w-8 h-8 text-gold/40" />
+                    </div>
 
-                {/* Message */}
-                <p className="text-foreground/90 font-body leading-relaxed flex-grow mb-6 italic">
-                  "{blessing.message}"
-                </p>
+                    {/* Message */}
+                    <p className="text-foreground/90 font-body leading-relaxed flex-grow mb-6 italic line-clamp-4">
+                      "{blessing.message}"
+                    </p>
 
-                {/* Author */}
-                <div className="flex items-center gap-3 pt-4 border-t border-border/50">
-                  <div className="w-10 h-10 rounded-full bg-gradient-to-br from-gold/20 to-bordeaux/20 flex items-center justify-center">
-                    <span className="font-heading text-lg text-gold">
-                      {blessing.name.charAt(0).toUpperCase()}
-                    </span>
-                  </div>
-                  <div>
-                    <h4 className="font-heading text-foreground">
-                      {blessing.name}
-                    </h4>
-                    <div className="flex items-center gap-1 text-sm text-muted-foreground">
-                      {getRelationshipIcon(blessing.relationship)}
-                      <span>{blessing.relationship}</span>
+                    {/* Author */}
+                    <div className="flex items-center gap-3 pt-4 border-t border-border/50">
+                      <div className="w-10 h-10 rounded-full bg-gradient-to-br from-gold/20 to-bordeaux/20 flex items-center justify-center">
+                        <span className="font-heading text-lg text-gold">
+                          {blessing.name.charAt(0).toUpperCase()}
+                        </span>
+                      </div>
+                      <div>
+                        <h4 className="font-heading text-foreground">
+                          {blessing.name}
+                        </h4>
+                        <div className="flex items-center gap-1 text-sm text-muted-foreground">
+                          {getRelationshipIcon(blessing.relationship)}
+                          <span>{blessing.relationship}</span>
+                        </div>
+                      </div>
                     </div>
                   </div>
-                </div>
-              </div>
-            </motion.div>
-          ))}
-        </div>
+                </CarouselItem>
+              ))}
+            </CarouselContent>
+            <CarouselPrevious className="hidden md:flex -left-12 border-gold/30 text-gold hover:bg-gold/10 hover:text-gold-bright" />
+            <CarouselNext className="hidden md:flex -right-12 border-gold/30 text-gold hover:bg-gold/10 hover:text-gold-bright" />
+          </Carousel>
+
+          {/* Mobile navigation dots indicator */}
+          <div className="flex justify-center gap-2 mt-6 md:hidden">
+            <span className="text-sm text-muted-foreground">
+              Glissez pour voir plus →
+            </span>
+          </div>
+        </motion.div>
       </div>
     </section>
   );
