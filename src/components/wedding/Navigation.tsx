@@ -9,6 +9,7 @@ const navItems = [
   { name: 'Lieux', href: '#lieux' },
   { name: 'Cadeaux', href: '#cadeaux' },
   { name: 'Contact', href: '#contact' },
+  { name: 'Témoignages', href: '#temoignages' },
 ];
 
 const Navigation = () => {

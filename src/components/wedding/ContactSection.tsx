@@ -13,6 +13,7 @@ import {
 } from 'lucide-react';
 import { useToast } from '@/hooks/use-toast';
 import confetti from 'canvas-confetti';
+import { supabase } from '@/integrations/supabase/client';
 
 const relationships = [
   'Ami(e)',
@@ -39,8 +40,22 @@ const ContactSection = () => {
     e.preventDefault();
     setIsSubmitting(true);
 
-    // Simulate API call
-    await new Promise((resolve) => setTimeout(resolve, 1500));
+    // Insert blessing into database
+    const { error } = await supabase.from('blessings').insert({
+      name: formData.name.trim(),
+      relationship: formData.relationship,
+      message: formData.message.trim(),
+    });
+
+    if (error) {
+      toast({
+        title: 'Erreur',
+        description: "Une erreur s'est produite. Veuillez réessayer.",
+        variant: 'destructive',
+      });
+      setIsSubmitting(false);
+      return;
+    }
 
     // Trigger confetti
     confetti({
