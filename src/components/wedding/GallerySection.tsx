@@ -1,16 +1,20 @@
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { X, ChevronLeft, ChevronRight, Heart } from 'lucide-react';
-import coupleHero from '@/assets/home.jpeg';
-import coupleStory from '@/assets/ibg.jpeg';
-import coupleStory2 from '@/assets/goree.jpeg';
-import coupleStory3 from '@/assets/church.jpeg';
+import coupleHero from '@/assets/marosa.jpg';
+import coupleStory from '@/assets/marosa-1.jpg';
+import coupleStory2 from '@/assets/marosa-2.jpg';
+import coupleStory3 from '@/assets/marosa-3.jpg';
+import coupleStory4 from '@/assets/marosa-4.jpg';
+import coupleStory5 from '@/assets/marosa-5.jpg';
 
 const galleryImages = [
   { src: coupleHero, alt: 'Maharo et Rosa - Portrait', caption: 'Notre amour' },
   { src: coupleStory, alt: 'Maharo et Rosa - Moment complice', caption: 'Moments de bonheur' },
   { src: coupleStory2, alt: 'Maharo et Rosa - Ensemble', caption: 'Ensemble pour toujours' },
   { src: coupleStory3, alt: 'Maharo et Rosa - Ensemble', caption: 'Ensemble pour toujours' },
+  { src: coupleStory4, alt: 'Maharo et Rosa - Ensemble', caption: 'Ensemble pour toujours' },
+  { src: coupleStory5, alt: 'Maharo et Rosa - Ensemble', caption: 'Ensemble pour toujours' },
 ];
 
 const GallerySection = () => {

@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
 import { ChevronDown, Heart } from 'lucide-react';
-import coupleHero from '@/assets/hero_1.jpg';
+import coupleHero from '@/assets/hero.jpg';
 import CountdownTimer from './CountdownTimer';
 const HeroSection = () => {
   const scrollToStory = () => {

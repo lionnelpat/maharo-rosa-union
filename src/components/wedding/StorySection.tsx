@@ -2,7 +2,7 @@ import { motion } from 'framer-motion';
 import { useInView } from 'framer-motion';
 import { useRef } from 'react';
 import { Heart, Sparkles } from 'lucide-react';
-import coupleStory from '@/assets/hero.png';
+import coupleStory from '@/assets/hero.jpg';
 import coupleStory2 from '@/assets/goree.jpeg';
 
 const StorySection = () => {
