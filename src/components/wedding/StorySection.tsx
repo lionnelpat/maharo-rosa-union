@@ -75,10 +75,11 @@ const StorySection = () => {
 
               </p>
               <p className="font-body text-foreground/80 leading-relaxed text-justify">
-                Maharo a beaucoup lu des livres sur la théologie systématique,  l'hermeneutique et les commentaires biblique.
-                Il aime les enseignements de John MacArthur, Florent Varak, Dominique Angers. <br/>
+                Maharo a beaucoup lu des livres sur la théologie systématique,  l'hermeneutique et les commentaires bibliques.
+                Il aime les enseignements et les livres de John MacArthur, Florent Varak, Dominique Angers, Alfred Kuen, John Piper, R.C. Sproul.
+                <br/>
                 Rosa est très intéressée par l'apologétique, l'histoire de l'église et la culture.
-                Ses auteurs et enseignants préférés sont Jean Calvin, Spurgeon, Vauddie Boccham, Raphaël Charrier, Douglas Wilson.
+                Ses auteurs et enseignants préférés sont *Jean Calvin, Spurgeon, Voddie Boccham, Elisabeth Elliot, Raphaël Charrier.
 
               </p>
               <blockquote className="pl-4 border-l-4 border-gold italic text-muted-foreground font-heading">
