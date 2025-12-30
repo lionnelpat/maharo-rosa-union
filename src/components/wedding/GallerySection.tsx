@@ -1,12 +1,12 @@
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { X, ChevronLeft, ChevronRight, Heart } from 'lucide-react';
-import coupleHero from '@/assets/marosa.jpg';
-import coupleStory from '@/assets/marosa-1.jpg';
-import coupleStory2 from '@/assets/marosa-2.jpg';
-import coupleStory3 from '@/assets/marosa-3.jpg';
-import coupleStory4 from '@/assets/marosa-4.jpg';
-import coupleStory5 from '@/assets/marosa-5.jpg';
+import coupleHero from '@/assets/marosa.jpeg';
+import coupleStory from '@/assets/marosa-1.jpeg';
+import coupleStory2 from '@/assets/marosa-2.jpeg';
+import coupleStory3 from '@/assets/marosa-3.jpeg';
+import coupleStory4 from '@/assets/marosa-4.jpeg';
+import coupleStory5 from '@/assets/marosa-5.jpeg';
 
 const galleryImages = [
   { src: coupleHero, alt: 'Maharo et Rosa - Portrait', caption: 'Notre amour' },
