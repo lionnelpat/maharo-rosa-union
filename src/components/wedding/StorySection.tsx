@@ -79,7 +79,7 @@ const StorySection = () => {
                 Il aime les enseignements et les livres de John MacArthur, Florent Varak, Dominique Angers, Alfred Kuen, John Piper, R.C. Sproul.
                 <br/>
                 Rosa est très intéressée par l'apologétique, l'histoire de l'église et la culture.
-                Ses auteurs et enseignants préférés sont *Jean Calvin, Spurgeon, Voddie Boccham, Elisabeth Elliot, Raphaël Charrier.
+                Ses auteurs et enseignants préférés sont <b>Jean Calvin, Spurgeon, Voddie Boccham, Elisabeth Elliot, Raphaël Charrier.</b>
 
               </p>
               <blockquote className="pl-4 border-l-4 border-gold italic text-muted-foreground font-heading">
