@@ -7,7 +7,7 @@ const navItems = [
   { name: 'Notre Histoire', href: '#histoire' },
   { name: 'Galerie', href: '#galerie' },
   { name: 'Lieux', href: '#lieux' },
-  { name: 'Cadeaux', href: '#cadeaux' },
+  // { name: 'Cadeaux', href: '#cadeaux' },
   { name: 'Contact', href: '#contact' },
 ];
 

@@ -68,7 +68,7 @@ const ContactSection = () => {
   };
 
   return (
-    <section id="contact" ref={ref} className="relative py-20 md:py-32 bg-card">
+    <section id="contact" ref={ref} className="relative py-20 md:py-32  bg-gradient-to-b from-background via-muted/30 to-background">
       {/* Decorative Background */}
       <div className="absolute inset-0 opacity-5">
         <div
@@ -156,24 +156,24 @@ const ContactSection = () => {
             </div>
 
             {/* RSVP Button */}
-            <div className="card-wedding p-6 bg-gradient-to-br from-gold/10 to-gold/5 border border-gold/20">
-              <h3 className="font-heading text-xl text-foreground mb-3 flex items-center gap-2">
-                <Sparkles className="w-5 h-5 text-gold" />
-                Confirmez votre présence
-              </h3>
-              <p className="text-muted-foreground text-sm mb-4">
-                Merci de nous confirmer votre présence avant le 01 janvier 2026
-              </p>
-              <a
-                href="https://forms.google.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="btn-gold inline-flex text-white items-center gap-2"
-              >
-                Remplir le formulaire
-                <ExternalLink className="w-4 h-4" />
-              </a>
-            </div>
+            {/*<div className="card-wedding p-6 bg-gradient-to-br from-gold/10 to-gold/5 border border-gold/20">*/}
+            {/*  <h3 className="font-heading text-xl text-foreground mb-3 flex items-center gap-2">*/}
+            {/*    <Sparkles className="w-5 h-5 text-gold" />*/}
+            {/*    Confirmez votre présence*/}
+            {/*  </h3>*/}
+            {/*  <p className="text-muted-foreground text-sm mb-4">*/}
+            {/*    Merci de nous confirmer votre présence avant le 01 janvier 2026*/}
+            {/*  </p>*/}
+            {/*  <a*/}
+            {/*    href="https://forms.google.com"*/}
+            {/*    target="_blank"*/}
+            {/*    rel="noopener noreferrer"*/}
+            {/*    className="btn-gold inline-flex text-white items-center gap-2"*/}
+            {/*  >*/}
+            {/*    Remplir le formulaire*/}
+            {/*    <ExternalLink className="w-4 h-4" />*/}
+            {/*  </a>*/}
+            {/*</div>*/}
           </motion.div>
 
           {/* Right Column - Blessing Form */}
