@@ -6,6 +6,7 @@ import PlacesSection from '@/components/wedding/PlacesSection';
 import GiftsSection from '@/components/wedding/GiftsSection';
 import ContactSection from '@/components/wedding/ContactSection';
 import Footer from '@/components/wedding/Footer';
+import TestimonialsSection from "@/components/wedding/TestimonialsSection.tsx";
 
 const Index = () => {
   return (
@@ -16,7 +17,7 @@ const Index = () => {
         <StorySection />
         <GallerySection />
         <PlacesSection />
-        {/*<GiftsSection />*/}
+          <TestimonialsSection />
         <ContactSection />
       </main>
       <Footer />

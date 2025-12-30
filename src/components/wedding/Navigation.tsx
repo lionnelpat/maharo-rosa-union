@@ -7,6 +7,7 @@ const navItems = [
   { name: 'Notre Histoire', href: '#histoire' },
   { name: 'Galerie', href: '#galerie' },
   { name: 'Lieux', href: '#lieux' },
+  { name: 'Témoignages', href: '#temoignages' },
   { name: 'Contact', href: '#contact' },
 ];
 
