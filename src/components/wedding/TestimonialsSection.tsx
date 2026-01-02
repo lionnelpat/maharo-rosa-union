@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
 import { useEffect, useState } from 'react';
-import { Heart, Quote, Users, Sparkles, ChevronLeft, ChevronRight } from 'lucide-react';
+import { Heart, Quote, Users, Sparkles } from 'lucide-react';
 import { supabase } from '@/integrations/supabase/client';
 import {
   Carousel,
@@ -9,6 +9,13 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from '@/components/ui/carousel';
+import {
+  Dialog,
+  DialogContent,
+  DialogHeader,
+  DialogTitle,
+} from '@/components/ui/dialog';
+import { ScrollArea } from '@/components/ui/scroll-area';
 
 interface Blessing {
   id: string;
@@ -21,6 +28,7 @@ interface Blessing {
 const TestimonialsSection = () => {
   const [blessings, setBlessings] = useState<Blessing[]>([]);
   const [isLoading, setIsLoading] = useState(true);
+  const [selectedBlessing, setSelectedBlessing] = useState<Blessing | null>(null);
 
   useEffect(() => {
     const fetchBlessings = async () => {
@@ -154,9 +162,19 @@ const TestimonialsSection = () => {
                     </div>
 
                     {/* Message */}
-                    <p className="text-foreground/90 font-body leading-relaxed flex-grow mb-6 italic line-clamp-4">
-                      "{blessing.message}"
-                    </p>
+                    <div className="flex-grow mb-6">
+                      <p className="text-foreground/90 font-body leading-relaxed italic line-clamp-4">
+                        "{blessing.message}"
+                      </p>
+                      {blessing.message.length > 150 && (
+                        <button
+                          onClick={() => setSelectedBlessing(blessing)}
+                          className="text-gold hover:text-gold-bright text-sm mt-2 font-medium transition-colors"
+                        >
+                          Voir plus →
+                        </button>
+                      )}
+                    </div>
 
                     {/* Author */}
                     <div className="flex items-center gap-3 pt-4 border-t border-border/50">
@@ -185,6 +203,36 @@ const TestimonialsSection = () => {
 
         </motion.div>
       </div>
+
+      {/* Dialog for full message */}
+      <Dialog open={!!selectedBlessing} onOpenChange={() => setSelectedBlessing(null)}>
+        <DialogContent className="max-w-lg">
+          <DialogHeader>
+            <DialogTitle className="flex items-center gap-3">
+              <div className="w-10 h-10 rounded-full bg-gradient-to-br from-gold/20 to-bordeaux/20 flex items-center justify-center">
+                <span className="font-heading text-lg text-gold">
+                  {selectedBlessing?.name.charAt(0).toUpperCase()}
+                </span>
+              </div>
+              <div>
+                <span className="font-heading text-foreground">{selectedBlessing?.name}</span>
+                <div className="flex items-center gap-1 text-sm text-muted-foreground font-normal">
+                  {selectedBlessing && getRelationshipIcon(selectedBlessing.relationship)}
+                  <span>{selectedBlessing?.relationship}</span>
+                </div>
+              </div>
+            </DialogTitle>
+          </DialogHeader>
+          <ScrollArea className="max-h-[60vh]">
+            <div className="pr-4">
+              <Quote className="w-6 h-6 text-gold/40 mb-2" />
+              <p className="text-foreground/90 font-body leading-relaxed italic">
+                "{selectedBlessing?.message}"
+              </p>
+            </div>
+          </ScrollArea>
+        </DialogContent>
+      </Dialog>
     </section>
   );
 };
