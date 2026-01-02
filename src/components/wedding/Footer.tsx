@@ -35,7 +35,7 @@ const Footer = () => {
 
         {/* Copyright */}
         <p className="text-cream/50 text-xs">
-          © 2025 - Créé avec amour pour Maharo & Rosa
+          © 2025 - Créé avec amour pour Maharo & Rosa By <a href="mailto:business.modeltech@gmail.com">Model Technologie</a>
         </p>
       </div>
     </footer>
