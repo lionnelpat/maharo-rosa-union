@@ -179,16 +179,10 @@ const TestimonialsSection = () => {
                 </CarouselItem>
               ))}
             </CarouselContent>
-            <CarouselPrevious className="hidden md:flex -left-12 border-gold/30 text-gold hover:bg-gold/10 hover:text-gold-bright" />
-            <CarouselNext className="hidden md:flex -right-12 border-gold/30 text-gold hover:bg-gold/10 hover:text-gold-bright" />
+            <CarouselPrevious className="-left-2 md:-left-12 border-gold/30 text-gold hover:bg-gold/10 hover:text-gold-bright" />
+            <CarouselNext className="-right-2 md:-right-12 border-gold/30 text-gold hover:bg-gold/10 hover:text-gold-bright" />
           </Carousel>
 
-          {/* Mobile navigation dots indicator */}
-          <div className="flex justify-center gap-2 mt-6 md:hidden">
-            <span className="text-sm text-muted-foreground">
-              Glissez pour voir plus →
-            </span>
-          </div>
         </motion.div>
       </div>
     </section>
