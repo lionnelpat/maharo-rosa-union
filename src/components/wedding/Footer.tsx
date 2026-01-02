@@ -28,9 +28,7 @@ const Footer = () => {
         <p className="italic text-cream/70 text-sm max-w-md mx-auto mb-6">
           "L'amour est patient, l'amour est serviable, il ne cherche pas son
           intérêt"
-          <span className="block mt-1 text-gold-light/70">
-            — 1 Corinthiens 13:4-5
-          </span>
+          <span className="block mt-1 text-gold-light/70"> — 1 Corinthiens 13:4-5 </span>
         </p>
 
         {/* Copyright */}
